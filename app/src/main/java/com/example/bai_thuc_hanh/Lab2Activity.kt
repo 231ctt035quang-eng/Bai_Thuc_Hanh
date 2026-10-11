@@ -1,5 +1,6 @@
 package com.example.bai_thuc_hanh
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -31,14 +32,17 @@ class Lab2Activity : AppCompatActivity() {
         val imgSort = findViewById<ImageView>(R.id.imageViewSort)
 
         btnDetail1?.setOnClickListener {
-            Toast.makeText(this, "Xem chi tiết: Nguyễn Văn An", Toast.LENGTH_SHORT).show()
+            openDetailScreen("1")
         }
+
         btnDetail2?.setOnClickListener {
-            Toast.makeText(this, "Xem chi tiết: Trần Thị B", Toast.LENGTH_SHORT).show()
+            openDetailScreen("2")
         }
+
         btnDetail3?.setOnClickListener {
-            Toast.makeText(this, "Xem chi tiết: Lê Minh Hoàng", Toast.LENGTH_SHORT).show()
+            openDetailScreen("3")
         }
+
         fabAdd?.setOnClickListener {
             Toast.makeText(this, "Thêm sinh viên mới", Toast.LENGTH_SHORT).show()
         }
@@ -48,5 +52,12 @@ class Lab2Activity : AppCompatActivity() {
         imgSort?.setOnClickListener {
             Toast.makeText(this, "Tính năng sắp xếp", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun openDetailScreen(studentId: String) {
+        val intent = Intent(this, Lab3Activity::class.java).apply {
+            putExtra(Lab3Activity.EXTRA_STUDENT_ID, studentId)
+        }
+        startActivity(intent)
     }
 }
