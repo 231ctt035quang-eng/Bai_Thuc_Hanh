@@ -38,7 +38,8 @@ private val DarkColorScheme = darkColorScheme(
 @Composable
 fun Lab4ThemeScreen(
     isDarkMode: Boolean = true,
-    onDarkModeChange: (Boolean) -> Unit = {}
+    onDarkModeChange: (Boolean) -> Unit = {},
+    onBackClick: () -> Unit = {}
 ) {
     MaterialTheme(colorScheme = DarkColorScheme) {
         Scaffold(
@@ -53,7 +54,7 @@ fun Lab4ThemeScreen(
                         )
                     },
                     navigationIcon = {
-                        IconButton(onClick = { /* Handle back */ }) {
+                        IconButton(onClick = onBackClick) {
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                 contentDescription = "Back",

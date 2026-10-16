@@ -17,7 +17,8 @@ class Lab4Activity : ComponentActivity() {
 
             Lab4ThemeScreen(
                 isDarkMode = isDarkMode,
-                onDarkModeChange = { isDarkMode = it }
+                onDarkModeChange = { isDarkMode = it },
+                onBackClick = { finish() }
             )
         }
     }
