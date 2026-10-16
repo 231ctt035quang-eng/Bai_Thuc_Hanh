@@ -66,8 +66,8 @@ class Lab3Activity : AppCompatActivity() {
     private fun getStudentById(id: String): Student {
         val list = listOf(
             Student("1", "Nguyễn Văn An", "Công nghệ thông tin", "an.nguyen@example.com", "0123 456 789"),
-            Student("2", "Trần Thị B", "Kế toán", "b.tran@example.com", "0987 654 321"),
-            Student("3", "Lê Minh Hoàng", "Quản trị kinh doanh", "hoang.le@example.com", "0912 345 678")
+            Student("2", "Trần Thị B", "Công nghệ thông tin", "b.tran@example.com", "0987 654 321"),
+            Student("3", "Lê Minh Hoàng", "Công nghệ thông tin", "hoang.le@example.com", "0912 345 678")
         )
         return list.find { it.id == id } ?: list[0]
     }
