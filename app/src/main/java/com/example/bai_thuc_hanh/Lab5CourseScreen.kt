@@ -1,4 +1,4 @@
-package com.example.bai_thuc_hanh // Giữ nguyên package name của bạn
+package com.example.bai_thuc_hanh
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -48,9 +48,6 @@ fun Lab5CourseScreen() {
                 uiState = CourseUiState.Success(
                     listOf(
                         Course("1", "Lập trình Android với Kotlin", "AND201", 3),
-//                        Course("2", "Cơ sở dữ liệu & SQL Server", "DB101", 4),
-//                        Course("3", "Kiến trúc & Thiết kế phần mềm", "SE302", 3),
-//                        Course("4", "Điện toán đám mây & DevOps", "CC401", 3)
                     )
                 )
             }
